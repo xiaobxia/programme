@@ -20,6 +20,8 @@ function setAdaptive() {
   var baseFontSize = 20
   // 页面的最小宽度
   var pageMinWidth = 1300
+  // 页面的最大宽度
+  var pageMaxWidth = 1920
   // 和width有关
   var winWidth = 0
   var winHeight = 0
@@ -40,6 +42,10 @@ function setAdaptive() {
   }
   if (winWidth <= pageMinWidth) {
     winWidth = pageMinWidth
+  }
+  // 最大宽度，防止无限比例放大
+  if (winWidth >= pageMaxWidth) {
+    winWidth = pageMaxWidth
   }
   var fontScale = winWidth / 1920
   var fontSize = baseFontSize * fontScale
