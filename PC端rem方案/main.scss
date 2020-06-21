@@ -1,0 +1,9 @@
+body {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  // 这个不能被转成rem
+  min-width: 1300PX;
+  // 这个按情况设置
+  min-height: 900px;
+}
